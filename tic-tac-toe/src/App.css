@@ -1,0 +1,65 @@
+html {
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: calc(50% - 650px) center;
+  transform: scale(0.8); 
+  transform-origin: center; 
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.board {
+  position: relative; /* Enable absolute positioning for the winning line */
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 20px; /* Maintained the gap */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 48px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.winning-line {
+  position: absolute;
+  background-color: #e84707;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
